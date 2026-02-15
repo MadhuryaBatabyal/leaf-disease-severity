@@ -5,7 +5,10 @@ from PIL import Image
 
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('tomato_blight_savedmodel')
+    return tf.keras.models.load_model('tomato_blight.keras')
+
+# Rest same as before...
+
 
 model = load_model()
 

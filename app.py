@@ -4,10 +4,12 @@ import numpy as np
 from PIL import Image
 import cv2
 
-# Load model
+# Load model (add compile=False)
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('tomato_blight_severity.h5')
+    return tf.keras.models.load_model('tomato_blight_severity.h5', compile=False)
+
+# Rest of code same...
 
 model = load_model()
 
